@@ -12,10 +12,8 @@ export default function Button(props: ButtonProps | AnchorProps) {
     // const { el,...otherProps } = props;
 
     if(props.el === "anchor"){
-        return <a {...props}>Click me</a>;
+        return <a className="button" {...props}>Click me</a>;
     }
     
-    return <a>Click me</a>;
-
-    return <button {...props}>Click me</button>;
+    return <button className="button" {...props}>Click me</button>;
 }
