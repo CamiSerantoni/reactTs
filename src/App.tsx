@@ -1,18 +1,14 @@
 import Input from "./components/Input";
-import Button from './components/Button';
+// import Button from './components/Button';
+import Container from "./components/Container";
+import Button from "./components/Button";
 
 function App() {
-  return <main>
-    {/* <Input id="name" label ="your name" type="text"/>
-    <Input id="age" label ="your age" type="number"/> */}
-
-    <p>
-      <Button href={undefined}>A button</Button>
-    </p>
-    <p>
-      <Button href="https://google.com" >A  Link</Button>
-    </p>
-    </main>;
+  return (
+    <main>    <Container as={Button}>Click me</Container>   </main>
+    
+  )
+     
 }
 
 export default App;
