@@ -5,7 +5,7 @@ import Button from "./components/Button";
 import { useRef } from "react";
 
 function App() {
-  const input = useRef(null)
+  const input = useRef<HTMLInputElement>(null)
   return (
     <main>
       <Input label="Test" id="test" ref={input}/>
