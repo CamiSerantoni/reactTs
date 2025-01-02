@@ -3,12 +3,19 @@ import Input from "./components/Input";
 import Container from "./components/Container";
 import Button from "./components/Button";
 import { useRef } from "react";
+import Form from "./components/Form";
 
 function App() {
 
+  function handleSave(data: unknown){
+
+    const extractedData= data as {name: string, age:string}
+    console.log(extractedData)
+  }
+
   return (
     <main>
-      <Form> 
+      <Form onSave={handleSave}> 
         <Input type="text" label="name" id="name"/>
         <Input type="number" label="age" id="age"/>
         <p> 
