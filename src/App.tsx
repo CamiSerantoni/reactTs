@@ -6,16 +6,18 @@ import { useRef } from "react";
 import Form from "./components/Form";
 
 function App() {
+const customForm = useRef(null)
 
   function handleSave(data: unknown){
 
     const extractedData= data as {name: string, age:string}
     console.log(extractedData)
+  form.current.clear()
   }
 
   return (
     <main>
-      <Form onSave={handleSave}> 
+      <Form onSave={handleSave} ref={customForm}> 
         <Input type="text" label="name" id="name"/>
         <Input type="number" label="age" id="age"/>
         <p> 
