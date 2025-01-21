@@ -94,10 +94,10 @@ export default function TimersContextProvider({children}: TimersContextProviderP
    
    
     const ctx: TimersContextValue = {
-        timers: [], 
-        isRunning: true,
+        timers: timersState.timers, 
+        isRunning: timersState.isRunning,
         addTimer(timerData){
-            dispatch({type: 'ADD_TIMER'})
+            dispatch({type: 'ADD_TIMER', payload: timerData})
         },
         startTimers(){
         dispatch({type: 'START_TIMERS'})
