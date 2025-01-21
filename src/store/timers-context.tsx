@@ -59,6 +59,7 @@ type StopTimersAction = {
 
 type Action = 
    StartTimersAction | StopTimersAction | AddTimerAction
+   payload?:  Timer 
 
 function timersReducer(state: TimersState, action: Action): TimersState{
     if(action.type === 'START_TIMERS'){
