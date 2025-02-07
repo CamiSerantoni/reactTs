@@ -14,7 +14,7 @@ function App() {
   useEffect(()=> {
 
 async function  fetchPosts(){
-  await get('https://jsonplaceholder.typicode.com/posts')
+  const data = await get('https://jsonplaceholder.typicode.com/posts')
 }
 
 fetchPosts()
