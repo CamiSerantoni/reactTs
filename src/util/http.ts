@@ -5,6 +5,6 @@ export async function get (url: string){
     throw new Error('Request failed to fetch data')
   }
 
- const data = await  response.json() as unknown
- return data
+  const data = await  response.json() as unknown
+  return data
 }
